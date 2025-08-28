@@ -14,20 +14,12 @@
       background-color: #fff0f6;
       color: #333;
     }
-    .hero {
-      background: linear-gradient(to right, #ffdee9, #ffb3d9);
-      text-align: center;
-      padding: 80px 20px;
-      color: #fff;
-    }
-    .hero img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      margin-bottom: 20px;
-    }
+    @keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+    
     .section-title {
       text-align: center;
       margin: 60px 0 30px;
@@ -84,26 +76,43 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="assets/images/profilepics.jpeg" alt="Profile Picture">
-    <h1 class="fw-bold">Hijabi Model</h1>
-    <p class="lead">Grace | Style | Inspiration</p>
-    <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="btn btn-light rounded-pill mt-3 px-4">
+<!-- Hero Section -->
+<section class="hero d-flex flex-column align-items-center justify-content-center text-center text-white position-relative py-5" 
+  style="min-height: 100vh; 
+         background: url('assets/images/profilepics.jpeg') center/cover no-repeat; 
+         background-attachment: fixed;">
+
+  <!-- Animated Gradient Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" 
+       style="background: linear-gradient(270deg, #6a0572, #a6033f, #0f2027, #2c5364);
+              background-size: 800% 800%;
+              animation: gradientShift 18s ease infinite;
+              opacity: 0.75;
+              z-index:0;">
+  </div>
+
+  <!-- Hero Content -->
+  <div class="container position-relative" style="z-index:1;">
+    <img src="assets/images/profilepics.jpeg" alt="Profile Picture" 
+         class="rounded-circle shadow-lg mb-4" 
+         style="width: 180px; height: 180px; object-fit: cover; border: 5px solid #fff;">
+    
+    <h1 class="fw-bold display-4 animate__animated animate__fadeInDown">Hijabi Model</h1>
+    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp">✨ Grace | Style | Inspiration ✨</p>
+    
+    <a href="https://wa.me/234XXXXXXXXXX" target="_blank" 
+       class="btn btn-light rounded-pill px-5 py-2 shadow-lg animate__animated animate__pulse animate__infinite">
       <i class="fab fa-whatsapp"></i> Chat on WhatsApp
     </a>
-  </section>
+  </div>
+</section>
 
  <!-- Highlights Section -->
 <section class="container">
   <h2 class="section-title">Highlights</h2>
   <div class="row gallery">
     <!-- Loop images hgl1.jpeg to hgl10.jpeg -->
-    <div class="col-lg-4 col-md-6 col-12">
-  <a href="assets/highlights/hgl1.jpeg" data-lightbox="highlights">
-    <img src="assets/highlights/hgl1.jpeg" alt="Highlight 1">
-  </a>
-</div>
+    
 <div class="col-lg-4 col-md-6 col-12">
   <a href="assets/highlights/hgl2.jpeg" data-lightbox="highlights">
     <img src="assets/highlights/hgl2.jpeg" alt="Highlight 2">
@@ -147,6 +156,11 @@
 <div class="col-lg-4 col-md-6 col-12">
   <a href="assets/highlights/hgl10.jpeg" data-lightbox="highlights">
     <img src="assets/highlights/hgl10.jpeg" alt="Highlight 10">
+  </a>
+</div>
+    <div class="col-lg-4 col-md-6 col-12">
+  <a href="assets/highlights/hgl1.jpeg" data-lightbox="highlights">
+    <img src="assets/highlights/hgl1.jpeg" alt="Highlight 1">
   </a>
 </div>
   </div>

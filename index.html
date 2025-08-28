@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hijabi Model | Profile</title>
+  <title>Rashida Otaru Ize | Profile</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -26,16 +27,17 @@
       font-weight: bold;
       color: #cc2a72;
     }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+.gallery-img {
+  width: 100%;
+  height: 250px; /* uniform height */
+  object-fit: cover; /* crop neatly without distortion */
+  border-radius: 12px; /* soft rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
     footer {
       background-color: #cc2a72;
       color: #fff;
@@ -72,14 +74,46 @@
       background: #1ebd5a;
       text-decoration: none;
     }
-  </style>
-</head>
-<body>
+
+.about-me-section {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.about-text {
+  background: #fff;
+  border-left: 5px solid #6a0572;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #6a0572;
+  text-align: right;
+}
+ </head> 
 
 <!-- Hero Section -->
 <section class="hero d-flex flex-column align-items-center justify-content-center text-center text-white position-relative py-5" 
   style="min-height: 100vh; 
-         background: url('assets/images/profilepics.jpeg') center/cover no-repeat; 
+         background: url('assets/images/photo11.jpeg') center/cover no-repeat; 
          background-attachment: fixed;">
 
   <!-- Animated Gradient Overlay -->
@@ -98,7 +132,7 @@
          style="width: 180px; height: 180px; object-fit: cover; border: 5px solid #fff;">
     
     <h1 class="fw-bold display-4 animate__animated animate__fadeInDown">Hijabi Model</h1>
-    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp">✨ Grace | Style | Inspiration ✨</p>
+    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp"> Elegance | Style | Inspiration</p>
     
     <a href="https://wa.me/234XXXXXXXXXX" target="_blank" 
        class="btn btn-light rounded-pill px-5 py-2 shadow-lg animate__animated animate__pulse animate__infinite">
@@ -167,94 +201,105 @@
 </section>
 
 <!-- Photos Section -->
-<section class="container">
-  <h2 class="section-title">More Photos</h2>
-  <div class="row gallery">
+<section class="container my-5">
+  <h2 class="section-title text-center mb-4">More Photos</h2>
+  <div class="row gallery g-3">
     <!-- Loop photo1.jpeg to photo12.jpeg -->
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo1.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo1.jpeg" alt="Photo 1">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo2.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo2.jpeg" alt="Photo 2">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo3.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo3.jpeg" alt="Photo 3">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo4.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo4.jpeg" alt="Photo 4">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo5.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo5.jpeg" alt="Photo 5">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo6.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo6.jpeg" alt="Photo 6">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo7.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo7.jpeg" alt="Photo 7">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo8.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo8.jpeg" alt="Photo 8">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo9.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo9.jpeg" alt="Photo 9">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo10.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo10.jpeg" alt="Photo 10">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo11.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo11.jpeg" alt="Photo 11">
-  </a>
-</div>
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="assets/photos/photo12.jpeg" data-lightbox="photos">
-    <img src="assets/photos/photo12.jpeg" alt="Photo 12">
-  </a>
-</div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo1.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo1.jpeg" alt="Photo 1" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo2.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo2.jpeg" alt="Photo 2" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo3.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo3.jpeg" alt="Photo 3" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo4.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo4.jpeg" alt="Photo 4" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo5.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo5.jpeg" alt="Photo 5" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo6.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo6.jpeg" alt="Photo 6" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo7.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo7.jpeg" alt="Photo 7" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo8.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo8.jpeg" alt="Photo 8" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo9.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo9.jpeg" alt="Photo 9" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo10.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo10.jpeg" alt="Photo 10" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo11.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo11.jpeg" alt="Photo 11" class="gallery-img">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="assets/photos/photo12.jpeg" data-lightbox="photos">
+        <img src="assets/photos/photo12.jpeg" alt="Photo 12" class="gallery-img">
+      </a>
+    </div>
   </div>
 </section>
 
-  <!-- About Me Section -->
-  <section class="container">
-    <h2 class="section-title">About Me</h2>
+
+<!-- About Me Section -->
+<section class="about-me-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">About Me</h2>
     <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-  <img 
-    src="assets/images/profilepics.jpeg" 
-    alt="Profile photo" 
-    class="img-fluid shadow" 
-    style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%;">
-</div>
-      <div class="col-md-8">
-        <p>
-          I am an exceptional hijabi model who blends elegance with creativity. 
-          Through my work, I aim to inspire confidence, modesty, and grace while 
-          breaking stereotypes and redefining beauty standards. My passion lies in 
-          storytelling through visuals, fashion, and lifestyle.
-        </p>
+      
+      <!-- Profile Image -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img 
+          src="assets/images/profilepics.jpeg" 
+          alt="Profile photo" 
+          class="profile-img shadow-lg">
       </div>
+      
+      <!-- About Text -->
+      <div class="col-md-8">
+        <div class="about-text p-4 rounded-4 shadow-sm">
+          <p class="fs-5">
+            I am an <strong>exceptional hijabi model</strong> who blends elegance with creativity. 
+            Through my work, I aim to inspire <em>confidence, modesty, and grace</em> while 
+            breaking stereotypes and redefining beauty standards. <br><br>
+            My passion lies in storytelling through <strong>visuals, fashion, and lifestyle</strong>.
+          </p>
+          <!-- Signature -->
+          <h3 class="signature mt-4">Bounty Adetula</h3>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>

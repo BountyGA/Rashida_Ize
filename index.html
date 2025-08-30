@@ -85,21 +85,38 @@
     }
 
     /* Footer */
-    .footer {
-      background: linear-gradient(135deg, #6a0572, #a6033f);
-      color: #fff;
-      font-size: 0.95rem;
-    }
-    .footer .social-links a {
-      color: #fff;
-      margin: 0 10px;
-      font-size: 1.3rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .footer .social-links a:hover {
-      color: #ffd700;
-      transform: scale(1.2);
-    }
+   .footer {
+    background: linear-gradient(135deg, #6a0572, #a6033f);
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  /* Social Icons */
+  .footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer .social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .footer .social-icon:hover {
+    background: #ffd700;
+    color: #6a0572;
+    transform: scale(1.15);
+  }
 
     /* Floating WhatsApp */
     .whatsapp-float {
@@ -387,17 +404,20 @@
 <footer class="footer text-center py-4">
   <div class="container">
     <p class="mb-2">© 2025 Rashida Ize. All Rights Reserved.</p>
+    
+    <!-- Social Icons -->
     <div class="social-links mb-3">
-      <a href="https://www.instagram.com/still_i_z_e?igsh=MXd2ZmxqbGJncXpvcw==" target="_blank">
+      <a href="https://www.instagram.com/still_i_z_e?igsh=MXd2ZmxqbGJncXpvcw==" target="_blank" class="social-icon">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="mailto:otarurashida13@gmail.com">
+      <a href="mailto:otarurashida13@gmail.com" class="social-icon">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://wa.me/qr/CF6GRKODQPX7N1" target="_blank">
+      <a href="https://wa.me/qr/CF6GRKODQPX7N1" target="_blank" class="social-icon">
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
+
     <small class="text-white-50">Designed & Developed by <strong>BGAA</strong></small>
   </div>
 </footer>

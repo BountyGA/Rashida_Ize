@@ -22,7 +22,7 @@
       background-color: #fff0f6;
       color: #333;
       margin: 0;
-      padding: 3%;
+      padding: 0;
     }
 
     /* Animated Gradient */
@@ -126,42 +126,60 @@
       color: #fff;
     }
 
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      background: url('assets/images/profilepics.jpeg') center/cover no-repeat;
-      background-attachment: fixed;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-    .hero .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(270deg, #6a0572, #a6033f, #0f2027, #2c5364);
-      background-size: 800% 800%;
-      animation: gradientShift 18s ease infinite;
-      opacity: 0.75;
-      z-index: 0;
-    }
-    .hero .container {
-      position: relative;
-      z-index: 1;
-    }
-    .hero .profile-hero-img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    }
+  /* Hero Section */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  background: url('assets/images/profilepics.jpeg') center/cover no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 60px 15px;  /* ✨ Added padding */
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(270deg, #6a0572, #a6033f, #0f2027, #2c5364);
+  background-size: 800% 800%;
+  animation: gradientShift 18s ease infinite;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;    /* keeps text column readable */
+}
+
+.hero .profile-hero-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 25px;  /* ✨ more space below image */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Optional: tighter spacing on very small screens */
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 10px;
+  }
+  .hero .profile-hero-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+}
+
 
     /* Responsive Layout Adjustments */
     @media (max-width: 768px) {
@@ -187,30 +205,34 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="overlay"></div>
-  <div class="container">
+  <div class="container text-center">
     <img src="assets/images/profilepics.jpeg" alt="Profile Picture" class="profile-hero-img">
-    <h1 class="fw-bold display-4">Rashida .O. Ize</h1>
+    
+    <h1 class="fw-bold display-4 mb-3">Rashida .O. Ize</h1>
     <p class="lead fs-4 mb-4">Elegance | Style | Inspiration</p>
+    
     <div class="col-lg-8 mx-auto">
-      <p class="fs-5">
+      <p class="fs-5 mb-4">
         Hello, I’m <strong>Rashida Ize</strong>, a hijabi model passionate about 
         <strong>representation, elegance, and diversity</strong> in the fashion industry. 
         With several years of experience, I’ve had the privilege of working on projects 
         that celebrate modesty while embracing creativity.
       </p>
-      <p class="fs-5">
+      <p class="fs-5 mb-4">
         I’m excited to bring my <strong>unique perspective, style, and energy</strong> to 
         your next campaign, and I’m confident in my ability to add value to your brand 
         or agency. Explore my portfolio — let’s connect and create something 
         extraordinary together!
       </p>
     </div>
+    
     <a href="https://wa.me/qr/CF6GRKODQPX7N1" target="_blank" 
        class="btn btn-light rounded-pill px-5 py-2 shadow-lg mt-3">
       <i class="fab fa-whatsapp"></i> Work With Me
     </a>
   </div>
 </section>
+
 
 <!-- Highlights Section -->
 <section class="container highlights">
